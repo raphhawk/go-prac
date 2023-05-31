@@ -19,3 +19,4 @@ run_posts:
 	cd ${POSTS_DIR} && ${NODE_EXEC}; 
 run_query:
 	cd ${QUERY_DIR} && ${NODE_EXEC}; 
+
