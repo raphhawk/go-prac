@@ -65,4 +65,20 @@ CMD ["redis-server"]        # specify initialization command
 
 ```sh
 $ docker build .
+$ docker build -t raphhawk/redis:latest . # tagged image
+```
+
+### <li>creating images manually(not recommended)</li>
+
+```sh
+$ docker run -it alpine:latest sh
+$ apk add --update redis                                 # run respective commands inside container
+$ dockee commit -c 'CMD ["redis-server"]' <container id> # create image out of newly created container
+```
+
+## Run Docker images on ports(port forwarding)
+
+```sh
+$ docker run -p 8080:8080 <image name> # forward localhost:8080 => docker:8080
+$ docker run -p 5000:8080 <image name> # forward localhost:5000 => docker:8080
 ```
