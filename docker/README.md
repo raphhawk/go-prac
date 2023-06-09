@@ -82,3 +82,31 @@ $ dockee commit -c 'CMD ["redis-server"]' <container id> # create image out of n
 $ docker run -p 8080:8080 <image name> # forward localhost:8080 => docker:8080
 $ docker run -p 5000:8080 <image name> # forward localhost:5000 => docker:8080
 ```
+
+# Kubernetes (k8s)
+
+## Minikube
+
+### use minikube for local k8s developement
+
+```sh
+$ minikube start                # start minikube
+$ minikube ip                   # get minikube ip
+$ eval $(minikube docker-env)   # execute docker commands inside minikube
+```
+
+## k8s commands
+
+```sh
+$ kubectl version                           # gets version of client & server
+$ kubectl get pods                          # gets list of pods
+$ kubectl get deployments                   # gets list of deployments
+$ kubectl get services                      # gets list of setvices
+$ kubectl apply -f <config.yaml>            # create pods/depls using yaml config
+$ kubectl delete pod <pod name>             # delete pods
+$ kubectl delete deployment <depl name>     # delete deployment
+$ kubectl describe pod <pod name>           # describe pods
+$ kubectl describe deployment <depl name>   # describe deployment
+$ kubectl describe service <srv name>       # describe service
+$ kubectl logs <pod name>                   # logs of particular pod
+```
