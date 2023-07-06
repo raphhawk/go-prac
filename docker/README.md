@@ -115,5 +115,5 @@ $ kubectl get services -n <namespace name>  # get objects in a specific namespac
 
 ## k8s communicating between objects of different namespaces
 ```url
-http://<object_name>.<namespace_name>.src.cluster.local/...
+http://<object_name>.<namespace_name>.svc.cluster.local/<required_url>
 ```
