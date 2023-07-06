@@ -109,4 +109,9 @@ $ kubectl describe pod <pod name>           # describe pods
 $ kubectl describe deployment <depl name>   # describe deployment
 $ kubectl describe service <srv name>       # describe service
 $ kubectl logs <pod name>                   # logs of particular pod
+$ kubectl get namespace                     # gets list of available namespaces
+$ kubectl get services -n <namespace name>  # get objects in a specific namespace 
 ```
+
+## k8s communicating between objects of different namespaces
+<h4>http://<object_name>.<namespace_name>.src.cluster.local/...</h4>
