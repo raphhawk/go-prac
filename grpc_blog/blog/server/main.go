@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/raphhawk/grpc_blog/blog/proto"
+	pb "github.com/raphhawk/grpc-blog/blog/proto"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"google.golang.org/grpc"
