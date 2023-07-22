@@ -110,10 +110,17 @@ $ kubectl describe deployment <depl name>   # describe deployment
 $ kubectl describe service <srv name>       # describe service
 $ kubectl logs <pod name>                   # logs of particular pod
 $ kubectl get namespace                     # gets list of available namespaces
-$ kubectl get services -n <namespace name>  # get objects in a specific namespace 
+$ kubectl get services -n <namespace name>  # get objects in a specific namespace
 ```
 
 ## k8s communicating between objects of different namespaces
+
 ```url
 http://<object_name>.<namespace_name>.svc.cluster.local/<required_url>
+```
+
+## k8s port forwarding
+
+```sh
+$ kubectl port-forward <pod name> <clien port>:<target port> # 4222:4222
 ```
